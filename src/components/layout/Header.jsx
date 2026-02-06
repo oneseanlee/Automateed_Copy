@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronDown, Globe, Menu, X } from 'lucide-react';
+import { Button } from "@heroui/react";
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -50,9 +51,13 @@ export const Header = () => {
 
                         <div className="flex items-center gap-4">
                             <a href="#" className="text-sm font-medium text-gray-600 hover:text-indigo-600">Log in</a>
-                            <button className="bg-indigo-600 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition-all hover:-translate-y-0.5">
+                            <Button
+                                color="primary"
+                                radius="full"
+                                className="font-bold text-white shadow-lg shadow-indigo-200 hover:-translate-y-0.5 transition-transform"
+                            >
                                 Sign Up
-                            </button>
+                            </Button>
                             <button className="flex items-center gap-1 text-sm font-medium text-gray-600">
                                 <Globe className="w-4 h-4" />
                                 EN
@@ -80,7 +85,9 @@ export const Header = () => {
                         <hr className="border-gray-100" />
                         <div className="flex flex-col gap-4">
                             <a href="#" className="text-center py-2 text-gray-600 font-medium">Log in</a>
-                            <button className="bg-indigo-600 text-white w-full py-3 rounded-xl font-bold">Sign Up</button>
+                            <Button color="primary" radius="full" className="w-full font-bold py-6 text-white">
+                                Sign Up
+                            </Button>
                         </div>
                     </div>
                 )}
